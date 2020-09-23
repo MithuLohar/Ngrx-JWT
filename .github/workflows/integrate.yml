@@ -13,7 +13,7 @@ jobs:
       steps:
         - uses:actions/checkout@v2
         - uses:actiona/setup-node@v1
-         with:
-           node-version:12
+           with:
+            node-version:12
         -run:npm ci 
         -run:npm run build       
