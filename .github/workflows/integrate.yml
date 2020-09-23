@@ -20,8 +20,7 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run-script build
-      - name: Test
-        run: npm run test
+      
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
