@@ -7,7 +7,7 @@ on:
 
 jobs:
    test_pull_request:
-      runs-on:Windows Server 2019
+      runs-on:ubuntu-latest
       steps:
        - uses:actions/checkout@v2
        -uses:actiona/setup-node@v1
