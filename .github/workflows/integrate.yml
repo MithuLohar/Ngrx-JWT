@@ -9,10 +9,10 @@ on:
 
 jobs:
    test_pull_request:
-      runs-on:ubuntu-latest
+      runs-on: ubuntu-latest
       steps:
         - uses:actions/checkout@v2
-        -uses:actiona/setup-node@v1
+        - uses:actiona/setup-node@v1
          with:
            node-version:12
         -run:npm ci 
