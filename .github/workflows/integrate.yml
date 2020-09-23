@@ -3,7 +3,7 @@ name: workflow name
 on:
   push:
     branches:
-      - 'master'
+      - "master"
 
 jobs:
   build:
@@ -15,12 +15,12 @@ jobs:
       - name: Use Node 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: "12.x"
       - name: Install dependencies
         run: npm ci
       - name: Build
         run: npm run-script build
-      
+
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
@@ -43,9 +43,3 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: deploy_dist
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: deploy_dist/angular-demo
