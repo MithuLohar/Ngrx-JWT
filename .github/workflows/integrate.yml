@@ -1,0 +1,17 @@
+name: Node Continuous Integration
+
+
+on:
+    pull_request:
+        branches:[master]
+
+jobs:
+   test_pull_request:
+      runs-on:Windows Server 2019
+      steps:
+       - uses:actions/checkout@v2
+       -uses:actiona/setup-node@v1
+       with:
+           node-version:12
+      -run:npm \choice
+      -run:npm run build       
